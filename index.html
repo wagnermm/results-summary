@@ -5,28 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/style.css">
-
+  
   <title>Results summary component</title>
 </head>
 <body>
-  <div class="container">
-    <div class="result">
-      <h2>Your Result</h2>
-      <div id="result">
-        
+  <div class="main">
+    <div class="container">
+      <div class="result">
+        <h2>Your Result</h2>
+        <div class="result-ether">
+          <div id="result"></div>
+          <div class="result-info">of 100</div>
+        </div>
+        <span id="result-title"></span>
+        <span id="result-description"></span>
       </div>
+      <form action="" class="summary">
+        <h2>Summary</h2>
+        <ul>
+          <li><p class="reaction"><i class="fa-solid fa-bolt"></i> Reaction</p><div><input type="text" id="reaction" placeholder="100" maxlength="3">/ 100</div></li>
+          <li><p class="memory"><i class="fa-solid fa-brain"></i> Memory</p><div><input type="text" id="memory" placeholder="100" maxlength="3">/ 100</div></li>
+          <li><p class="verbal"><i class="fa-solid fa-comment-dots"></i> Verbal</p><div><input type="text" id="verbal" placeholder="100" maxlength="3">/ 100</div></li>
+          <li><p class="visual"><i class="fa-solid fa-eye"></i> Visual</p><div><input type="text" id="visual" placeholder="100" maxlength="3">/ 100</div></li>
+        </ul>
+        <div class="btn">
+          <button id="btn">Continue</button>
+        </div>
+        
+      </form>
     </div>
-    <form action="" class="summary">
-      <h2>Summary</h2>
-      <ul>
-        <li>Reaction <input id="reaction" placeholder="100" type="number">/100</li>
-        <li>Memory <input id="memory" placeholder="100" type="number">/100</li>
-        <li>Verbal <input id="verbal" placeholder="100" type="number">/100</li>
-        <li>Visual <input id="visual" placeholder="100" type="number">/100</li>
-      </ul>
-      <button id="btn">Continue</button>
-    </form>
   </div>
+  <script src="https://kit.fontawesome.com/cc8f61138a.js" crossorigin="anonymous"></script>
   <script src="./js/script.js"></script>
 </body>
 </html>

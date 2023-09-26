@@ -8,13 +8,20 @@ html {
     font-size: 62.2%;
     font-family: 'Hanken Grotesk';
 }
-.container {
+.main {
     width: 100%;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: #ddd;
+    border-radius: 2rem;
 }
 .result {
     width: 400px;
@@ -33,16 +40,35 @@ html {
     color: #ddd;
     margin-bottom: 5rem;
 }
-#result {
+.result-ether {
+    position: relative;
     width: 200px;
     height: 200px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 200px;
     background: linear-gradient(0deg, rgba(46,43,233,1) 0%, rgb(59, 27, 148) 100%);
+}
+#result {
     font-size: 8rem;
     font-weight: 800;
+}
+.result-info {
+    position: absolute;
+    bottom: 5vh;
+    color: #ddd;
+    font-size: 1.6rem;
+}
+#result-title {
+    margin-top: 2rem;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+#result-description {
+    font-size: 1.4rem;
+    color: #ddd;
 }
 .summary {
     width: 400px;
@@ -52,9 +78,59 @@ html {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: #ddd;
-    border-radius: 2rem;
 }
 .summary h2 {
     font-size: 2rem;
+    margin-bottom: 4rem;
+}
+.summary ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.summary li {
+    list-style: none;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+.reaction {
+    color: hsl(0, 100%, 67%);
+}
+.memory {
+    color: hsl(39, 100%, 56%);
+}
+.verbal {
+    color: hsl(166, 100%, 37%);
+}
+.visual {
+    color: hsl(234, 85%, 45%);
+}
+input {
+    width: 30px;
+    outline: none;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    background-color: #ddd;
+}
+.btn {
+    margin-top: 5rem;
+    width: 100%;
+    text-align: center;
+}
+#btn {
+    width: 80%;
+    height: 4rem;
+    background: linear-gradient(0deg, rgba(46,43,233,1) 0%, rgb(59, 27, 148) 100%);
+    color: #fff;
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#btn:hover {
+    letter-spacing: 1px;
 }
