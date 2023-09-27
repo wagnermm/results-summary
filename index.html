@@ -14,7 +14,7 @@
       <div class="result">
         <h2>Your Result</h2>
         <div class="result-ether">
-          <input type="text" id="result" placeholder="00">
+          <input type="text" id="result">
           <span id="resultText"></span>
           <div class="result-info">of 100</div>
         </div>
@@ -27,15 +27,15 @@
           <span class="erro-info"></span>
         </div>
         <ul>
-          <li><p class="reaction"><i class="fa-solid fa-bolt"></i> Reaction</p><div><input type="text" id="reaction" class="inputReactionValue" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onkeyup="inputTransferReaction()" placeholder="100" maxlength="3">/ 100</div></li>
-          <li><p class="memory"><i class="fa-solid fa-brain"></i> Memory</p><div><input type="text" id="memory" class="inputMemoryValue" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onkeyup="inputTransferReaction()" placeholder="100" maxlength="3">/ 100</div></li>
-          <li><p class="verbal"><i class="fa-solid fa-comment-dots"></i> Verbal</p><div><input type="text" id="verbal" class="inputVerbalValue" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onkeyup="inputTransferReaction()" placeholder="100" maxlength="3">/ 100</div></li>
-          <li><p class="visual"><i class="fa-solid fa-eye"></i> Visual</p><div><input type="text" id="visual" class="inputVisualValue" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onkeyup="inputTransferReaction()" placeholder="100" maxlength="3">/ 100</div></li>
+          <li><p class="reaction"><i class="fa-solid fa-bolt"></i> Reaction</p><div><input type="text" id="reaction" class="inputReactionValue" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onkeyup="inputTransferReaction()" oninput="btnAble()" placeholder="100" maxlength="3">/ 100</div></li>
+          <li><p class="memory"><i class="fa-solid fa-brain"></i> Memory</p><div><input type="text" id="memory" class="inputMemoryValue" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onkeyup="inputTransferReaction()" oninput="btnAble()" placeholder="100" maxlength="3">/ 100</div></li>
+          <li><p class="verbal"><i class="fa-solid fa-comment-dots"></i> Verbal</p><div><input type="text" id="verbal" class="inputVerbalValue" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onkeyup="inputTransferReaction()" oninput="btnAble()" placeholder="100" maxlength="3">/ 100</div></li>
+          <li><p class="visual"><i class="fa-solid fa-eye"></i> Visual</p><div><input type="text" id="visual" class="inputVisualValue" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onkeyup="inputTransferReaction()" oninput="btnAble()" placeholder="100" maxlength="3">/ 100</div></li>
         </ul>
         <div class="btn">
-          <button id="btn">Continue</button>
+          <button id="btn" disabled>Continue</button>
+          <button id="reload"><i class="fa-solid fa-arrows-rotate"></i></button>
         </div>
-        
       </form>
     </div>
   </div>

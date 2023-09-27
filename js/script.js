@@ -8,6 +8,7 @@ let visual = document.querySelector('#visual');
 let classVisual = document.getElementsByClassName('inputVisualValue');
 let valueResult = document.querySelector('#result');
 let button = document.getElementById('btn');
+let buttonReload = document.getElementById('reload');
 let inputValor = /^(?:100|[1-9]?[0-9])$/;
 
 
@@ -40,8 +41,12 @@ for( let emFoco of classVisual ) {
 };
 
 const btnAble = ()=> {
-  if(classReaction.match(inputValor) && classMemory.match(inputValor) && classVerbal.match(inputValor) &&
-  classVisual.match(inputValor)) {
+  var reactionId = document.getElementById('reaction').value;
+  var memoryId = document.getElementById('memory').value;
+  var verbalId = document.getElementById('verbal').value;
+  var visualId = document.getElementById('visual').value;
+  if(reactionId.match(inputValor) && memoryId.match(inputValor) && verbalId.match(inputValor) &&
+  visualId.match(inputValor)) {
     button.disabled = false;
     return
   } else {
@@ -66,4 +71,8 @@ button.addEventListener('click', function(event) {
     document.getElementById('result-title').innerHTML = "";
     document.getElementById('result-description').innerHTML = "";
   }
+});
+
+buttonReload.addEventListener('click', function() {
+  location.reload();
 });

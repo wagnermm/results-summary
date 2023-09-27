@@ -22,6 +22,7 @@ html {
     align-items: center;
     background-color: #ddd;
     border-radius: 2rem;
+    box-shadow: 5px 20px 20px rgba(46,43,233,0.1);
 }
 .result {
     width: 400px;
@@ -74,7 +75,7 @@ html {
 .result-info {
     position: absolute;
     bottom: 5vh;
-    color: #ddd;
+    color: #bbb;
     font-size: 1.6rem;
 }
 #result-title {
@@ -147,7 +148,8 @@ input {
 .btn {
     margin-top: 5rem;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 #btn {
     width: 80%;
@@ -165,4 +167,14 @@ input {
 #btn:disabled {
     opacity: 75%;
     cursor: auto;
+}
+#reload {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+@media(max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
 }
