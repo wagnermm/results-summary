@@ -52,8 +52,24 @@ html {
     background: linear-gradient(0deg, rgba(46,43,233,1) 0%, rgb(59, 27, 148) 100%);
 }
 #result {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-size: 8rem;
     font-weight: 800;
+    background: none;
+    color: #fff;
+}
+#resultText {
+    position: absolute;
+    font-size: 8rem;
+    font-weight: 800;
+    background: none;
+    color: #fff;
 }
 .result-info {
     position: absolute;
@@ -79,9 +95,21 @@ html {
     justify-content: flex-start;
     align-items: flex-start;
 }
-.summary h2 {
+.form-title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-title h2 {
     font-size: 2rem;
     margin-bottom: 4rem;
+}
+.erro-info {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #f00;
 }
 .summary ul {
     width: 100%;
@@ -133,4 +161,8 @@ input {
 }
 #btn:hover {
     letter-spacing: 1px;
+}
+#btn:disabled {
+    opacity: 75%;
+    cursor: auto;
 }
