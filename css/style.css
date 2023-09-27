@@ -165,7 +165,7 @@ input {
     letter-spacing: 1px;
 }
 #btn:disabled {
-    opacity: 75%;
+    background: #151827;
     cursor: auto;
 }
 #reload {
